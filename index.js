@@ -18,12 +18,12 @@ client.once('ready', () => {
 client.login(process.env.DISCORD_TOKEN);
 
 // We're going to set our command prefix as *. You can use whatever you'd like
-const prefix = "*"
+const prefix = "."
 
 // Whenever the client sees a new message in the chat, run the following code
 client.on('message', message => {
     // We'll respond with 'Hello World!' if we see a *hello in the chat. 
     // In programming adding 2 strings/words together looks like this: "hello" + "world" == "helloworld"
-    if (message.content === (prefix + 'hello'))
-        message.channel.send('Hello World!'); 
+    if (message.content === (prefix + 'name'))
+        message.channel.send('this is the only command i have rn'); 
 });
